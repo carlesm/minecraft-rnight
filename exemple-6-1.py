@@ -6,6 +6,6 @@ pos = mc.player.getTilePos()
 
 turtle = MinecraftTurtle(mc, pos)
 turtle.speed(10)
-for step in range(0, 20):
-    turtle.right(5)
+for step in range(0, 100):
+    turtle.right(4)
     turtle.forward(2)
