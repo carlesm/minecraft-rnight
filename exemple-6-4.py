@@ -16,26 +16,19 @@ pos = mc.player.getPos()
 
 # create minecraft turtle
 turtle = MinecraftTurtle(mc, pos)
-
 turtle.speed(0)
-turtle.penblock(block.WOOL.id, 14)
-S = 50
-for j in range(0, 20):
-    turtle.up(j * 10)
-    turtle.forward(S)
+turtle.setheading(90)
+NumberOfSides = 5
+Angle = 360 / NumberOfSides
+SideLength = 20
+WoolColour = 0
 
-    turtle.left(90)
-    turtle.down(j * 10)
-    turtle.forward(S)
-
-    turtle.left(90)
-    turtle.down(j * 10)
-    turtle.forward(S)
-
-    turtle.left(90)
-    turtle.up(j * 10)
-    turtle.forward(S)
-    turtle.left(90)
-
-    turtle.left(10)
-    S = 0.9 * S
+for count in range(24):
+    for side in range(NumberOfSides):
+        turtle.forward(SideLength)
+        turtle.right(Angle)
+    turtle.right(15)
+    WoolColour += 1
+    if WoolColour > 15:
+        WoolColour = 0
+    turtle.penblock(block.WOOL.id, WoolColour)

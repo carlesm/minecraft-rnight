@@ -2,9 +2,6 @@ from mcpi import minecraft
 mc = minecraft.Minecraft.create(address="193.144.12.6", name="test1")
 
 pos = mc.player.getTilePos()
-print("x", pos.x)
-print("y", pos.y)
-print("z", pos.z)
 
 pos.x = pos.x - 10
 pos.y = pos.y - 10
