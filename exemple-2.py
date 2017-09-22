@@ -5,5 +5,8 @@ pos = mc.player.getTilePos()
 print("x", pos.x)
 print("y", pos.y)
 print("z", pos.z)
-mc.postToChat("Estas a "+str(pos.x)+","+str(pos.y)+","+str(pos.z))
-# mc.player.setPos(pos.x, pos.y+100, pos.z)
+
+x = 13
+y = 5
+z = 13
+mc.player.setPos(x, y, z)
