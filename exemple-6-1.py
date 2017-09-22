@@ -1,6 +1,6 @@
 from minecraftstuff import MinecraftTurtle
 from mcpi import minecraft
-mc = minecraft.Minecraft.create(address="193.144.12.6", name="test1")
+mc = minecraft.Minecraft.create(address="minecraft.lliure.cat", name="test1")
 
 pos = mc.player.getTilePos()
 
